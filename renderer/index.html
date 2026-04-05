@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartVFO Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Title bar -->
+  <div id="titlebar">
+    <div id="titlebar-drag">
+      <span class="title-text">SmartVFO Companion</span>
+    </div>
+    <div id="titlebar-controls">
+      <button id="btn-settings" class="titlebar-btn" title="Settings">⚙</button>
+      <button id="btn-minimize" class="titlebar-btn" title="Minimize">─</button>
+      <button id="btn-close" class="titlebar-btn close-btn" title="Close">✕</button>
+    </div>
+  </div>
+
+  <!-- Settings panel (hidden by default) -->
+  <div id="settings-panel" class="hidden">
+    <div class="settings-row">
+      <label>Serial Port</label>
+      <div class="settings-control">
+        <select id="port-select"><option value="">-- Select --</option></select>
+        <button id="btn-refresh-ports" class="small-btn" title="Refresh">↻</button>
+        <button id="btn-connect" class="small-btn">Connect</button>
+      </div>
+    </div>
+    <div class="settings-row">
+      <label>Always on Top</label>
+      <div class="settings-control">
+        <button id="btn-ontop" class="toggle-btn">OFF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main input row -->
+  <div id="input-row">
+    <input type="text" id="cw-input" placeholder="Type CW text here..." autofocus spellcheck="false" autocomplete="off">
+    <button id="btn-mode" class="mode-btn" title="Toggle Realtime / Sentence mode">REALTIME</button>
+  </div>
+
+  <!-- Log row -->
+  <div id="log-row">
+    <div id="log-output"></div>
+    <button id="btn-clear" class="clear-btn" title="Clear log">CLEAR</button>
+  </div>
+
+  <!-- Status bar -->
+  <div id="status-bar">
+    <span id="status-text">Disconnected</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

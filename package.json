@@ -1,0 +1,59 @@
+{
+  "name": "smartvfo-companion",
+  "version": "1.0.0",
+  "description": "Companion app for SmartVFO - Serial CW text input",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac --arm64",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.gururf.smartvfo-companion",
+    "productName": "SmartVFO Companion",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64"]
+        }
+      ],
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "category": "Utility",
+      "icon": "build/icon-256.png"
+    }
+  },
+  "author": "Guru-RF",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^12.0.0"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
