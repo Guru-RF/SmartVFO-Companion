@@ -24,7 +24,8 @@
           "arch": ["arm64"]
         }
       ],
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns"
     },
     "win": {
       "target": [
@@ -32,7 +33,8 @@
           "target": "portable",
           "arch": ["x64"]
         }
-      ]
+      ],
+      "icon": "build/icon.ico"
     },
     "linux": {
       "target": [
@@ -41,7 +43,8 @@
           "arch": ["x64", "arm64"]
         }
       ],
-      "category": "Utility"
+      "category": "Utility",
+      "icon": "build/icon-256.png"
     }
   },
   "author": "Guru-RF",

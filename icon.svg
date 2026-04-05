@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A42C"/>
+      <stop offset="100%" stop-color="#B8891E"/>
+    </linearGradient>
+    <linearGradient id="dialGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2A2A"/>
+      <stop offset="100%" stop-color="#1A1A1A"/>
+    </linearGradient>
+    <linearGradient id="knobGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8BA40"/>
+      <stop offset="100%" stop-color="#C89820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="url(#bgGrad)"/>
+
+  <!-- Outer dial ring -->
+  <circle cx="256" cy="240" r="185" fill="url(#dialGrad)"/>
+
+  <!-- Dial face -->
+  <circle cx="256" cy="240" r="165" fill="#222222" stroke="#3A3A3A" stroke-width="2"/>
+
+  <!-- Tick marks - major (gold) -->
+  <g stroke="#D4A42C" stroke-width="4" stroke-linecap="round">
+    <!-- Major ticks around the dial arc (bottom open) -->
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(-135, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(-108, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(-81, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(-54, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(-27, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(0, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(27, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(54, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(81, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(108, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="105" transform="rotate(135, 256, 240)"/>
+  </g>
+
+  <!-- Tick marks - minor -->
+  <g stroke="#887744" stroke-width="2" stroke-linecap="round">
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(-121.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(-94.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(-67.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(-40.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(-13.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(13.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(40.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(67.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(94.5, 256, 240)"/>
+    <line x1="256" y1="82" x2="256" y2="95" transform="rotate(121.5, 256, 240)"/>
+  </g>
+
+  <!-- Frequency numbers -->
+  <g fill="#D4A42C" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">
+    <text x="120" y="155" transform="rotate(-45, 120, 148)">1</text>
+    <text x="100" y="220">3</text>
+    <text x="120" y="305" transform="rotate(30, 120, 298)">5</text>
+    <text x="256" y="120">7</text>
+    <text x="392" y="155" transform="rotate(45, 392, 148)">14</text>
+    <text x="412" y="220">21</text>
+    <text x="392" y="305" transform="rotate(-30, 392, 298)">28</text>
+  </g>
+
+  <!-- Center knob -->
+  <circle cx="256" cy="240" r="60" fill="url(#knobGrad)" stroke="#A07818" stroke-width="3"/>
+  <circle cx="256" cy="240" r="50" fill="#2A2A2A" stroke="#444" stroke-width="1"/>
+
+  <!-- Knob grip lines -->
+  <g stroke="#555" stroke-width="2" stroke-linecap="round">
+    <line x1="236" y1="225" x2="236" y2="255"/>
+    <line x1="248" y1="222" x2="248" y2="258"/>
+    <line x1="260" y1="222" x2="260" y2="258"/>
+    <line x1="272" y1="225" x2="272" y2="255"/>
+  </g>
+
+  <!-- Needle/pointer -->
+  <line x1="256" y1="195" x2="256" y2="115" stroke="#E83030" stroke-width="4" stroke-linecap="round" transform="rotate(35, 256, 240)"/>
+  <circle cx="256" cy="240" r="8" fill="#E83030"/>
+
+  <!-- VFO text at bottom -->
+  <text x="256" y="430" fill="#1A1A1A" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" letter-spacing="8">VFO</text>
+
+  <!-- Subtle shadow under text -->
+  <text x="257" y="431" fill="rgba(0,0,0,0.2)" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" letter-spacing="8">VFO</text>
+</svg>
