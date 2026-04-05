@@ -11,11 +11,15 @@ jobs:
     runs-on: macos-14  # Apple Silicon runner
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install setuptools
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build:mac
+      - run: npx electron-builder --mac --arm64 --publish never
       - uses: actions/upload-artifact@v4
         with:
           name: mac-arm64-dmg
@@ -33,7 +37,7 @@ jobs:
           node-version: 20
       - run: npm install
       - name: Build Linux ${{ matrix.arch }}
-        run: npx electron-builder --linux --${{ matrix.arch }}
+        run: npx electron-builder --linux --${{ matrix.arch }} --publish never
       - uses: actions/upload-artifact@v4
         with:
           name: linux-${{ matrix.arch }}-appimage
@@ -47,7 +51,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build:win
+      - run: npx electron-builder --win --x64 --publish never
       - uses: actions/upload-artifact@v4
         with:
           name: win-x64-portable
