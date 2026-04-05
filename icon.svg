@@ -53,17 +53,6 @@
     <line x1="256" y1="82" x2="256" y2="95" transform="rotate(121.5, 256, 240)"/>
   </g>
 
-  <!-- Frequency numbers -->
-  <g fill="#D4A42C" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">
-    <text x="120" y="155" transform="rotate(-45, 120, 148)">1</text>
-    <text x="100" y="220">3</text>
-    <text x="120" y="305" transform="rotate(30, 120, 298)">5</text>
-    <text x="256" y="120">7</text>
-    <text x="392" y="155" transform="rotate(45, 392, 148)">14</text>
-    <text x="412" y="220">21</text>
-    <text x="392" y="305" transform="rotate(-30, 392, 298)">28</text>
-  </g>
-
   <!-- Center knob -->
   <circle cx="256" cy="240" r="60" fill="url(#knobGrad)" stroke="#A07818" stroke-width="3"/>
   <circle cx="256" cy="240" r="50" fill="#2A2A2A" stroke="#444" stroke-width="1"/>
@@ -80,9 +69,9 @@
   <line x1="256" y1="195" x2="256" y2="115" stroke="#E83030" stroke-width="4" stroke-linecap="round" transform="rotate(35, 256, 240)"/>
   <circle cx="256" cy="240" r="8" fill="#E83030"/>
 
-  <!-- VFO text at bottom -->
-  <text x="256" y="430" fill="#1A1A1A" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" letter-spacing="8">VFO</text>
+  <!-- SmartVFO text at bottom -->
+  <text x="256" y="470" fill="#1A1A1A" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" text-anchor="middle" letter-spacing="4">SmartVFO</text>
 
   <!-- Subtle shadow under text -->
-  <text x="257" y="431" fill="rgba(0,0,0,0.2)" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" letter-spacing="8">VFO</text>
+  <text x="257" y="471" fill="rgba(0,0,0,0.2)" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" text-anchor="middle" letter-spacing="4">SmartVFO</text>
 </svg>
